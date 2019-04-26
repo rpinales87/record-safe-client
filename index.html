@@ -12,6 +12,41 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1 class="d-flex justify-content-center">Record Safe</h1>
+
+      <!-- Sign up form  -->
+          <form id="sign-up">
+        <input required type="email" name="credentials[email]" placeholder="Email">
+        <input required type="password" name="credentials[password]" placeholder="Password">
+        <input required type="password" name="credentials[password_confirmation]" placeholder="Password confirmation">
+        <button type="submit" class="btn btn-secondary">Sign up</button>
+      </form>
+
+      <!--  Sign in form -->
+      <form id="sign-in">
+          <input required type="email" name="credentials[email]" placeholder="Email">
+          <input required type="password" name="credentials[password]" placeholder="Password">
+          <button type="submit" class="btn btn-secondary">Sign in</button>
+        </form>
+
+        <!-- Change password form  -->
+        <form id="change-password" class="hidden">
+      <input required type="password" name="passwords[old]" placeholder="Old password">
+      <input required type="password" name="passwords[new]" placeholder="New password">
+      <button type="submit" class="btn btn-secondary">Change password</button>
+    </form>
+
+    <!-- Sign out 'button' -->
+        <button id="sign-out" type="submit" class="hidden btn btn-secondary">log out</button>
+
+      <div class="nav-buttons">
+        <button id="getRecords" class="btn btn-info mr-2">Your records</button>
+        <button id="addRecord" class="btn btn-outline-info">Add record</button>
+      </div>
+
+      <div class="record-safe">inventory</div>
+
+      <h2 class="message"></h2>
+
     </body>
 </html>
