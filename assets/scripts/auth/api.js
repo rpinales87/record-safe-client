@@ -3,7 +3,7 @@ const store = require('../store')
 
 // API call to create a new user account
 const signUp = function (data) {
-  console.log('data is:', data)
+  console.log('signup is:', data)
   return $.ajax({
     url: config.apiUrl + '/sign-up',
     method: 'POST',
@@ -13,6 +13,7 @@ const signUp = function (data) {
 
 // API call to sign in a registered user.
 const signIn = function (data) {
+  console.log('signin is: ', data)
   return $.ajax({
     url: config.apiUrl + '/sign-in',
     method: 'POST',
