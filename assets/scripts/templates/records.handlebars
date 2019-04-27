@@ -1,0 +1,34 @@
+{{#each records as |record|}}
+  {{log record}}
+  <section data-id="{{record.id}}">
+    <!-- <h6>Title:</h6> -->
+    <h2>
+      {{limit record.title 15}}
+    </h2>
+    <p> Artist:
+      {{#if record.artist}}
+        {{record.artist}}
+      {{else}}
+        No artist provided.
+      {{/if}}
+    </p>
+    <p> year:
+      {{#if record.year}}
+        {{record.year}}
+      {{else}}
+        No year provided.
+      {{/if}}
+    </p>
+    <p> Genre:
+      {{#if record.genre}}
+        {{record.genre}}
+      {{else}}
+        No genre provided.
+      {{/if}}
+    </p>
+    <!-- {{> partial}} -->
+    <button data-id="{{record.id}}" class="btn btn-danger remove">Delete record</button>
+    <button data-id="{{record.id}}" class="btn btn-danger remove">Delete record</button>
+  </section>
+
+{{/each}}
