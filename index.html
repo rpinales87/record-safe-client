@@ -36,17 +36,23 @@
       <button type="submit" class="btn btn-secondary">Change password</button>
     </form>
 
-    <!-- Sign out 'button' -->
-        <button id="sign-out" type="submit" class="hidden btn btn-secondary">log out</button>
-
+<!-- get all records button-->
         <nav>
           <div class="nav-buttons">
             <button id="get-records" class="btn btn-info mr-2">Your records</button>
           </div>
-          <div class="nav-buttons">
-            <button id="add-record" class="btn btn-outline-info">Add record</button>
-          </div>
+          <!-- Add record form  -->
+          <form id="add-record" class="nav-buttons">
+            <input type="text" name="title" placeholder="Title">
+            <input type="text" name="artist" placeholder="Artist">
+            <input type="text" name="genre" placeholder="Genre">
+            <input type="text" name="year" placeholder="Year">
+            <button type="submit" class="btn btn-outline-info">Add record</button>
+          </form>
       </nav>
+
+      <!-- Sign out 'button' -->
+          <button id="sign-out" type="submit" class="hidden btn btn-secondary">log out</button>
 
       <div id="content" class="content"></div>
 
