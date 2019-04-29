@@ -46,7 +46,7 @@ const addHandlers = () => {
   $('#get-records').on('click', onGetRecords)
   $('#content').on('click', '.remove', onDestroyRecord)
   $('#add-record').on('submit', onCreateRecord)
-  $('#content').on('submit', '#update-record', onUpdateRecord)
+  $('#content').on('submit', '.update-record', onUpdateRecord)
 }
 
 module.exports = {

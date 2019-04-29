@@ -29,13 +29,46 @@
     <!-- {{> partial}} -->
 
 <!--  Update record form -->
-    <form data-id="{{record.id}}" id="update-record" class="nav-buttons">
+    <!-- <form data-id="{{record.id}}" class=" update-record nav-buttons">
       <input type="text" name="title" placeholder="Title" value="{{record.title}}">
       <input type="text" name="artist" placeholder="Artist" value="{{record.artist}}">
       <input type="text" name="genre" placeholder="Genre" value="{{record.genre}}">
       <input type="text" name="year" placeholder="Year" value="{{record.year}}">
       <button type="submit" class="btn btn-success update">update record</button>
-    </form>
+    </form> -->
+
+    <!-- Update record button trigger modal -->
+      <button type="button" class="btn btn-success update" data-toggle="modal" data-target="#updateRecordModal">
+        Update record
+      </button>
+
+  <!-- Update record modal -->
+  <div class="modal fade" id="updateRecordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Update record</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form data-id="{{record.id}}" class=" update-record nav-buttons">
+            <input type="text" name="title" placeholder="Title" value="{{record.title}}">
+            <input type="text" name="artist" placeholder="Artist" value="{{record.artist}}">
+            <input type="text" name="genre" placeholder="Genre" value="{{record.genre}}">
+            <input type="text" name="year" placeholder="Year" value="{{record.year}}">
+            <button type="submit" class="btn btn-success update">update record</button>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-secondary">Sign in</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
 
     <!-- <button data-id="{{record.id}}" class="btn btn-success update">update record</button> -->
     <button data-id="{{record.id}}" class="btn btn-danger remove">Delete record</button>

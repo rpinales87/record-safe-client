@@ -11,58 +11,153 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
+
       <h1 class="d-flex justify-content-center">Record Safe</h1>
 
-      <!-- Sign up form  -->
-      <form id="sign-up">
-        <input required type="email" name="credentials[email]" placeholder="Email">
-        <input required type="password" name="credentials[password]" placeholder="Password">
-        <input required type="password" name="credentials[password_confirmation]" placeholder="Password confirmation">
-        <button type="submit" class="btn btn-secondary">Sign up</button>
-      </form>
+      <!-- Sign up button trigger modal -->
+      <div class="d-flex justify-content-center">
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal">
+          Sign up
+        </button>
+      </div>
 
-      <!--  Sign in form -->
-        <form id="sign-in">
-          <input required type="email" name="credentials[email]" placeholder="Email">
-          <input required type="password" name="credentials[password]" placeholder="Password">
-          <button type="submit" class="btn btn-secondary">Sign in</button>
-        </form>
-
-        <!-- Change password form  -->
-    <form id="change-password" class="hidden">
-      <input required type="password" name="passwords[old]" placeholder="Old password">
-      <input required type="password" name="passwords[new]" placeholder="New password">
-      <button type="submit" class="btn btn-secondary">Change password</button>
-    </form>
-
-<!-- get all records button-->
-        <nav>
-          <div class="nav-buttons">
-            <button id="get-records" class="btn btn-info mr-2">Your records</button>
+      <!-- Sign up modal -->
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-up">
+                <div> <input required type="email" name="credentials[email]" placeholder="Email"></div>
+                <input required type="password" name="credentials[password]" placeholder="Password">
+                <input required type="password" name="credentials[password_confirmation]" placeholder="Password confirmation">
+                <button type="submit" class="btn btn-secondary">Sign up</button>
+              </form>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-secondary">Sign up</button>
+            </div> -->
           </div>
-          <!-- Add record form  -->
-          <form id="add-record" class="nav-buttons">
-            <input type="text" name="title" placeholder="Title">
-            <input type="text" name="artist" placeholder="Artist">
-            <input type="text" name="genre" placeholder="Genre">
-            <input type="text" name="year" placeholder="Year">
-            <button type="submit" class="btn btn-outline-info">Add record</button>
-          </form>
+        </div>
+      </div>
 
-          <!-- update record form  -->
-          <!-- <form id="update-record" class="nav-buttons">
-            <input type="text" name="title" placeholder="Title">
-            <input type="text" name="artist" placeholder="Artist">
-            <input type="text" name="genre" placeholder="Genre">
-            <input type="text" name="year" placeholder="Year">
-            <button type="submit" class="btn btn-outline-info">update record</button>
-          </form>
- -->
+          <!-- Sign in button trigger modal -->
+          <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#signInModal">
+              Sign in
+            </button>
+          </div>
+
+        <!-- Sign in modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="sign-in">
+                  <input required type="email" name="credentials[email]" placeholder="Email">
+                  <input required type="password" name="credentials[password]" placeholder="Password">
+                  <button type="submit" class="btn btn-secondary">Sign in</button>
+                </form>
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-secondary">Sign in</button>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+    <!-- Change password button trigger modal -->
+    <div class="hidden d-flex justify-content-center">
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordModal">
+        Change password
+      </button>
+    </div>
+
+    <!-- Change password modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">change password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="change-password" class="hidden">
+              <input required type="password" name="passwords[old]" placeholder="Old password">
+              <input required type="password" name="passwords[new]" placeholder="New password">
+              <button type="submit" class="btn btn-secondary">Change password</button>
+            </form>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-secondary">Sign up</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign out 'button' -->
+    <div class="hidden d-flex justify-content-center">
+      <button id="sign-out" type="submit" class="btn btn-secondary btn-lg">log out</button>
+    </div>
+
+    <!-- get all records button-->
+      <nav>
+          <div class="hidden nav-buttons d-flex justify-content-center">
+            <button id="get-records" class="btn btn-info mr-2 btn-lg">Your records</button>
+          </div>
+
+    <!-- Add record button trigger modal -->
+        <div class="hidden d-flex justify-content-center">
+          <button type="button" class="btn btn-info mr-2 btn-lg" data-toggle="modal" data-target="#addRecordModal">
+            Add record
+          </button>
+        </div>
+
+    <!-- Add record modal -->
+          <div class="modal fade" id="addRecordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add record</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="add-record" class="nav-buttons">
+                    <input type="text" name="title" placeholder="Title">
+                    <input type="text" name="artist" placeholder="Artist">
+                    <input type="text" name="genre" placeholder="Genre">
+                    <input type="text" name="year" placeholder="Year">
+                    <button type="submit" class="btn btn-outline-info">Add record</button>
+                  </form>
+                </div>
+                <!-- <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-secondary">Sign up</button>
+                </div> -->
+              </div>
+            </div>
+          </div>
       </nav>
-
-      <!-- Sign out 'button' -->
-          <button id="sign-out" type="submit" class="hidden btn btn-secondary">log out</button>
 
       <div id="content" class="content"></div>
 

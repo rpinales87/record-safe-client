@@ -5,6 +5,7 @@ const signUpSuccess = function (data) {
 //  console.log('sign up success ran with the data: ', data)
   $('.message').text('Sign up success, please sign in.')
   $('form').trigger('reset')
+  $('')
 }
 
 const signUpFailure = function (data) {
