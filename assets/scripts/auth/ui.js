@@ -18,8 +18,9 @@ const signUpFailure = function (data) {
 const signInSuccess = function (data) {
 //  console.log('sign in success ran with the data: ', data)
   store.user = data.user
-  $('#change-password').show()
-  $('.message').text('Sign in success.').hide(950)
+  $('.sView').show()
+  $('.lView').hide()
+  $('.message').text('Sign in success.')
   $('form').trigger('reset')
 }
 
@@ -44,7 +45,10 @@ const changePasswordFailure = function (data) {
 
 const signOutSuccess = function () {
 //  console.log('Sign out successfull!')
-  $('.message').empty().show()
+  $('.sView').hide()
+  $('.lView').show()
+  $('.content').empty()
+  $('.message').empty()
   $('form').trigger('reset')
   $('.change-password').empty().show()
   store.user = null

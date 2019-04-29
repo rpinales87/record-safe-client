@@ -5,6 +5,7 @@
     <h2>
       {{limit record.title 15}}
     </h2>
+    <p> ID: {{record.id}}</p>
     <p> Artist:
       {{#if record.artist}}
         {{record.artist}}
@@ -28,22 +29,13 @@
     </p>
     <!-- {{> partial}} -->
 
-<!--  Update record form -->
-    <!-- <form data-id="{{record.id}}" class=" update-record nav-buttons">
-      <input type="text" name="title" placeholder="Title" value="{{record.title}}">
-      <input type="text" name="artist" placeholder="Artist" value="{{record.artist}}">
-      <input type="text" name="genre" placeholder="Genre" value="{{record.genre}}">
-      <input type="text" name="year" placeholder="Year" value="{{record.year}}">
-      <button type="submit" class="btn btn-success update">update record</button>
-    </form> -->
-
     <!-- Update record button trigger modal -->
-      <button type="button" class="btn btn-success update" data-toggle="modal" data-target="#updateRecordModal">
+      <button type="button" class="btn btn-success update" data-toggle="modal" data-target=".modal[data-id='{{record.id}}']">
         Update record
       </button>
 
   <!-- Update record modal -->
-  <div class="modal fade" id="updateRecordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" data-id="{{record.id}}"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -68,7 +60,6 @@
       </div>
     </div>
   </div>
-
 
     <!-- <button data-id="{{record.id}}" class="btn btn-success update">update record</button> -->
     <button data-id="{{record.id}}" class="btn btn-danger remove">Delete record</button>

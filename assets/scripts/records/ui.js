@@ -4,6 +4,7 @@ const store = require('../store')
 const createRecordSuccess = response => {
   console.log('create record Success is: ', response)
   $('form').trigger('reset')
+  $('.message').text('Record created.')
 }
 
 const updateRecordSuccess = response => {
@@ -17,6 +18,7 @@ const getRecordsSuccess = response => {
   // $('.content').text(store.records)
   const showRecordsHtml = recordsTemplate({ records: response.records })
   $('.content').html(showRecordsHtml)
+  $('.message').empty()
 }
 
 // const destroyRecordSuccess = () => {
