@@ -1,15 +1,28 @@
 const config = require('../config')
 const store = require('../store')
 
-// const title = document.getElementById('new-title').value
-// const artist = document.getElementById('new-artist').value
-// const genre = document.getElementById('new-genre').value
-// const year = document.getElementById('new-year').value
-
 const createRecord = (data) => {
   return $.ajax({
     url: config.apiUrl + '/records',
     method: 'POST',
+    headers: {
+      'Authorization': 'Token token=' + store.user.token
+    },
+    data: {
+      'record': {
+        'title': data.title,
+        'artist': data.artist,
+        'genre': data.genre,
+        'year': data.year
+      }
+    }
+  })
+}
+
+const updateRecord = (data, recordId) => {
+  return $.ajax({
+    url: config.apiUrl + `/records/${recordId}`,
+    method: 'PATCH',
     headers: {
       'Authorization': 'Token token=' + store.user.token
     },
@@ -63,6 +76,7 @@ const destroyRecord = recordId => {
 
 module.exports = {
   createRecord,
+  updateRecord,
   getRecords,
   destroyRecord
   // updateRecord

@@ -27,7 +27,17 @@
       {{/if}}
     </p>
     <!-- {{> partial}} -->
-    <button data-id="{{record.id}}" class="btn btn-success update">update record</button>
+
+<!--  Update record form -->
+    <form data-id="{{record.id}}" id="update-record" class="nav-buttons">
+      <input type="text" name="title" placeholder="Title" value="{{record.title}}">
+      <input type="text" name="artist" placeholder="Artist" value="{{record.artist}}">
+      <input type="text" name="genre" placeholder="Genre" value="{{record.genre}}">
+      <input type="text" name="year" placeholder="Year" value="{{record.year}}">
+      <button type="submit" class="btn btn-success update">update record</button>
+    </form>
+
+    <!-- <button data-id="{{record.id}}" class="btn btn-success update">update record</button> -->
     <button data-id="{{record.id}}" class="btn btn-danger remove">Delete record</button>
   </section>
 

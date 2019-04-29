@@ -21,6 +21,18 @@ const onGetRecords = event => {
     .catch(ui.failure)
 }
 
+const onUpdateRecord = event => {
+  // console.log('event is: ', event)
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  const recordId = $(event.target).data('id')
+  console.log('update record data is: ', data)
+  api.createRecord(data, recordId)
+    .then(ui.updateRecordSuccess)
+    //  store.record = response.record
+    .catch(ui.faliure)
+}
+
 const onDestroyRecord = event => {
   event.preventDefault()
   const recordId = $(event.target).data('id')
@@ -34,9 +46,11 @@ const addHandlers = () => {
   $('#get-records').on('click', onGetRecords)
   $('#content').on('click', '.remove', onDestroyRecord)
   $('#add-record').on('submit', onCreateRecord)
+  $('#content').on('submit', '#update-record', onUpdateRecord)
 }
 
 module.exports = {
   addHandlers,
-  onCreateRecord
+  onCreateRecord,
+  onUpdateRecord
 }
