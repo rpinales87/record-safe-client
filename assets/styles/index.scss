@@ -16,12 +16,13 @@ html {
   }
 
 body {
-    background-image: url('../public/background.jpg');
+    background-image: url('public/background.jpg');
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Righteous', cursive;
+    background-attachment:fixed;
   }
 
 h1,
@@ -29,3 +30,7 @@ h2,
 p {
   color: $white;
   }
+
+.update-message {
+  color: $black;
+}
