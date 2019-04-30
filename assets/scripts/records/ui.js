@@ -1,5 +1,6 @@
 const recordsTemplate = require('../templates/records.handlebars')
 const store = require('../store')
+// const events = require('./events')
 
 const createRecordSuccess = response => {
   console.log('create record Success is: ', response)
@@ -9,6 +10,7 @@ const createRecordSuccess = response => {
 
 const updateRecordSuccess = response => {
   console.log('update record Success is: ', response)
+  $('.update-message').text('Record updated.')
   // $('form').trigger('reset')
 }
 

@@ -14,7 +14,7 @@
 
     <body>
 
-      <h1 class="d-flex justify-content-center">Record Safe</h1>
+      <h1 class="app-name d-flex justify-content-center">Record Safe</h1>
 
       <!-- Sign up button trigger modal -->
       <div class="d-flex justify-content-center">
@@ -41,10 +41,6 @@
                 <button type="submit" class="btn btn-secondary">Sign up</button>
               </form>
             </div>
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-secondary">Sign up</button>
-            </div> -->
           </div>
         </div>
       </div>
@@ -73,17 +69,15 @@
                   <button type="submit" class="btn btn-secondary">Sign in</button>
                 </form>
               </div>
-              <!-- <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-secondary">Sign in</button>
-              </div> -->
             </div>
           </div>
         </div>
 
+<!-- Navigation bar -->
+<nav class="nav justify-content-end">
     <!-- Change password button trigger modal -->
     <div class="d-flex justify-content-center">
-      <button type="button" class="sView btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordModal">
+      <button type="button" class="nav-item sView btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordModal">
         Change password
       </button>
     </div>
@@ -105,21 +99,17 @@
               <button type="submit" class="btn btn-secondary">Change password</button>
             </form>
           </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-secondary">Sign up</button>
-          </div> -->
         </div>
       </div>
     </div>
 
     <!-- Sign out 'button' -->
     <div class="d-flex justify-content-center">
-      <button id="sign-out" type="submit" class="sView btn btn-secondary btn-lg">log out</button>
+      <button id="sign-out" type="submit" class="nav-item sView btn btn-secondary btn-lg">log out</button>
     </div>
+</nav>
 
     <!-- get all records button-->
-      <nav>
           <div class="nav-buttons d-flex justify-content-center">
             <button id="get-records" class="sView btn btn-info mr-2 btn-lg">Your records</button>
           </div>
@@ -150,14 +140,9 @@
                     <button type="submit" class="btn btn-outline-info">Add record</button>
                   </form>
                 </div>
-                <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-secondary">Sign up</button>
-                </div> -->
               </div>
             </div>
           </div>
-      </nav>
 
       <p class="d-flex justify-content-center message"></p>
 

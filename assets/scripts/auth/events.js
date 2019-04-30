@@ -41,8 +41,26 @@ const onSignOut = function (event) {
 // event handlers
 const addHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
+  $('#sign-up').submit(function (e) {
+    e.preventDefault()
+    $('#signUpModal').modal('toggle')
+    return false
+  })
+
   $('#sign-in').on('submit', onSignIn)
+  $('#sign-in').submit(function (e) {
+    e.preventDefault()
+    $('#signInModal').modal('toggle')
+    return false
+  })
+
   $('#change-password').on('submit', onChangePassword)
+  $('#change-password').submit(function (e) {
+    e.preventDefault()
+    $('#changePasswordModal').modal('toggle')
+    return false
+  })
+
   $('#sign-out').on('click', onSignOut)
 }
 

@@ -1,5 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
-
+@import 'typography';
 
 .btn-lg {
   margin: 5px;
@@ -8,3 +8,23 @@
 button.sView {
   display: none;
 }
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  }
+
+body {
+    background-image: url('../public/background.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Righteous', cursive;
+  }
+
+h1,
+p {
+  color: $white;
+  }
