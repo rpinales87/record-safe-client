@@ -36,11 +36,11 @@ p {
 }
 
 .grid-container {
+  background-color: #cdd2ca20;
   display: inline-grid;
   grid-template-columns: auto auto auto;
-  background-color: #cdd2ca20;
-  padding: 10px;
   margin: 5px;
+  padding: 10px;
   position: relative;
 }
 

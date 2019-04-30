@@ -1,6 +1,7 @@
 const recordsTemplate = require('../templates/records.handlebars')
 const store = require('../store')
 // const events = require('./events')
+// const events = require('./events')
 
 const createRecordSuccess = response => {
   // console.log('create record Success is: ', response)
@@ -10,8 +11,10 @@ const createRecordSuccess = response => {
 
 const updateRecordSuccess = response => {
   // console.log('update record Success is: ', response)
-  $('.update-message').text('Record updated.')
-  // $('form').trigger('reset')
+  $('.update-message').text('Record updated, please reload your records.')
+  // $('.modal').modal('hide')
+  // $('#get-records').trigger('click')
+//  $('#content').on('click', '.close-modal', () => events.onGetRecords())
 }
 
 const getRecordsSuccess = response => {

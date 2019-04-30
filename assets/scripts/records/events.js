@@ -29,7 +29,7 @@ const onUpdateRecord = event => {
   const recordId = $(event.target).data('id')
   // console.log('update record data is: ', data)
   api.updateRecord(data, recordId)
-   // .then(() => onGetRecords(event))
+    // .then(() => onGetRecords(event))
     // .then(() => api.getRecords())
     .then(ui.updateRecordSuccess)
     //  store.record = response.record
@@ -49,6 +49,7 @@ const addHandlers = () => {
   $('#get-records').on('click', onGetRecords)
   $('#content').on('click', '.remove', onDestroyRecord)
   $('#content').on('submit', '.update-record', onUpdateRecord)
+  // $('#content').on('click', '.close-modal', () => onGetRecords(event))
 
   $('#add-record').on('submit', onCreateRecord)
   $('#add-record').submit(function (e) {
