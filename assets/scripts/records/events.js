@@ -7,7 +7,7 @@ const onCreateRecord = event => {
   // console.log('event is: ', event)
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('create record data is: ', data)
+  // console.log('create record data is: ', data)
   api.createRecord(data)
     .then(ui.createRecordSuccess)
     //  store.record = response.record
@@ -26,7 +26,7 @@ const onUpdateRecord = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   const recordId = $(event.target).data('id')
-  console.log('update record data is: ', data)
+  // console.log('update record data is: ', data)
   api.updateRecord(data, recordId)
     .then(ui.updateRecordSuccess)
     // .then(() => onGetRecords(event))
@@ -37,10 +37,10 @@ const onUpdateRecord = event => {
 const onDestroyRecord = event => {
   event.preventDefault()
   const recordId = $(event.target).data('id')
-  console.log(recordId)
+  // console.log(recordId)
   api.destroyRecord(recordId)
     .then(() => onGetRecords(event))
-    .cath(ui.failure)
+    .catch(ui.failure)
 }
 
 const addHandlers = () => {

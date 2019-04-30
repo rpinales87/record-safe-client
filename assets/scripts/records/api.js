@@ -58,22 +58,6 @@ const destroyRecord = recordId => {
   })
 }
 
-// const updateRecord = (title, artist, genre, year) => {
-//   return $.ajax({
-//     url: config.Url + '/records/' + store.record.id,
-//     method: 'PATCH',
-//     headers: {
-//       'Authorization': 'Token token=' + store.user.token
-//     },
-//     data: {
-//       'title': title,
-//       'artist': artist,
-//       'genre': genre,
-//       'year': year
-//     }
-//   })
-// }
-
 module.exports = {
   createRecord,
   updateRecord,
