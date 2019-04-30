@@ -15,12 +15,15 @@ const updateRecordSuccess = response => {
 }
 
 const getRecordsSuccess = response => {
-  // console.log('get records is: ', response)
-  store.records = response.records
-  // $('.content').text(store.records)
-  const showRecordsHtml = recordsTemplate({ records: response.records })
-  $('.content').html(showRecordsHtml)
-  $('.message').empty()
+  console.log('get records is: ', response)
+  if (response.records.length === 0) {
+    $('.message').text('You don\'t have any record.')
+  } else {
+    store.records = response.records
+    const showRecordsHtml = recordsTemplate({ records: response.records })
+    $('.content').html(showRecordsHtml)
+    $('.message').empty()
+  }
 }
 
 const failure = error => {

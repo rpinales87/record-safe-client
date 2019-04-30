@@ -15,6 +15,7 @@ const onCreateRecord = event => {
 }
 
 const onGetRecords = event => {
+  console.log('get records is: ', event)
   event.preventDefault()
   api.getRecords()
     .then(ui.getRecordsSuccess)
