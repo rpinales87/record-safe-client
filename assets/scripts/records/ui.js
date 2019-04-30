@@ -15,7 +15,7 @@ const updateRecordSuccess = response => {
 }
 
 const getRecordsSuccess = response => {
-  console.log('get records is: ', response)
+  // console.log('get records is: ', response)
   if (response.records.length === 0) {
     $('.message').text('You don\'t have any record.')
   } else {
