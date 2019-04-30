@@ -32,14 +32,14 @@ const signInFailure = function (data) {
 
 const changePasswordSuccess = function (data) {
 //  console.log('change password success ran with the data: ', data)
-  $('.change-password').text('Password successfuly updated.').hide(3000)
+  $('.message').text('Password successfuly updated.')
   $('form').trigger('reset')
   // store.user = data.user
 }
 
 const changePasswordFailure = function (data) {
 //  console.log('change password failure ran with the data: ', data)
-  $('.change-password').text('Something went wrong, please try again.')
+  $('.message').text('Something went wrong, please try again.')
   $('form').trigger('reset')
 }
 
@@ -50,7 +50,6 @@ const signOutSuccess = function () {
   $('.content').empty()
   $('.message').empty()
   $('form').trigger('reset')
-  $('.change-password').empty().show()
   store.user = null
 }
 
