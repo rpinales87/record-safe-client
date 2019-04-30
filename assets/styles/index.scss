@@ -41,7 +41,6 @@ p {
   background-color: #cdd2ca20;
   padding: 10px;
   margin: 5px;
-  // opacity: 0.2;
   position: relative;
 }
 
@@ -51,5 +50,10 @@ p {
   padding: 20px;
   text-align: center;
   display: grid;
-//  position: absolute;
+}
+
+@media screen and (max-width: 991px) {
+nav {
+  justify-content: center;
+}
 }

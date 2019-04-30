@@ -5,7 +5,7 @@ const store = require('../store')
 const createRecordSuccess = response => {
   // console.log('create record Success is: ', response)
   $('form').trigger('reset')
-  $('.message').text('Record created.')
+  $('.message').text("New record added to 'Your Records'.")
 }
 
 const updateRecordSuccess = response => {
@@ -17,7 +17,10 @@ const updateRecordSuccess = response => {
 const getRecordsSuccess = response => {
   // console.log('get records is: ', response)
   if (response.records.length === 0) {
-    $('.message').text('You don\'t have any record.')
+    $('.message').text('You don\'t have any records.')
+    store.records = response.records
+    const showRecordsHtml = recordsTemplate({ records: response.records })
+    $('.content').html(showRecordsHtml)
   } else {
     store.records = response.records
     const showRecordsHtml = recordsTemplate({ records: response.records })

@@ -15,7 +15,7 @@ const onCreateRecord = event => {
 }
 
 const onGetRecords = event => {
-  console.log('get records is: ', event)
+  // console.log('get records is: ', event)
   event.preventDefault()
   api.getRecords()
     .then(ui.getRecordsSuccess)
@@ -29,8 +29,9 @@ const onUpdateRecord = event => {
   const recordId = $(event.target).data('id')
   // console.log('update record data is: ', data)
   api.updateRecord(data, recordId)
+   // .then(() => onGetRecords(event))
+    // .then(() => api.getRecords())
     .then(ui.updateRecordSuccess)
-    // .then(() => onGetRecords(event))
     //  store.record = response.record
     .catch(ui.faliure)
 }
