@@ -36,11 +36,11 @@ Like any project day one was all about planning and setting everything up, after
 These are my initial wireframes I used this to give an idea in how the final product should look.
 
 Wireframes:
-https://imgur.com/a/mNKedl9
-https://imgur.com/a/zgBtT3i
+* https://imgur.com/a/mNKedl9
+* https://imgur.com/a/zgBtT3i
 
 ERD:
-https://imgur.com/a/vasAbPX
+* https://imgur.com/a/vasAbPX
 
 ### Development process
 --------
