@@ -12,6 +12,7 @@ const createRecordSuccess = response => {
 const updateRecordSuccess = response => {
   // console.log('update record Success is: ', response)
   $('.update-message').text('Record updated, please reload your records.')
+  $('.update-backdrop').remove()
   // $('.modal').modal('hide')
   // $('#get-records').trigger('click')
 //  $('#content').on('click', '.close-modal', () => events.onGetRecords())

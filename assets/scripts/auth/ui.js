@@ -18,7 +18,7 @@ const signUpFailure = function (data) {
 const signInSuccess = function (data) {
 //  console.log('sign in success ran with the data: ', data)
   store.user = data.user
-  $('.sView').show()
+  $('.s-view').show()
   $('.lView').hide()
   $('.message').text('Sign in success.')
   $('form').trigger('reset')
@@ -45,7 +45,7 @@ const changePasswordFailure = function (data) {
 
 const signOutSuccess = function () {
 //  console.log('Sign out successfull!')
-  $('.sView').hide()
+  $('.s-view').hide()
   $('.lView').show()
   $('.content').empty()
   $('.message').empty()
