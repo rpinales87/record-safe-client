@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Record Safe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+
+    <body>
+
+      <h1 class="app-name d-flex justify-content-center">Record Safe</h1>
+
+      <!-- Sign up button trigger modal -->
+      <div class="d-flex justify-content-center">
+        <button type="button" class="lView btn btn-primary btn-lg" data-toggle="modal" data-target="#signUpModal">
+          Sign up
+        </button>
+      </div>
+
+      <!-- Sign up modal -->
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form id="sign-up">
+                <div> <input required type="email" name="credentials[email]" placeholder="Email"></div>
+                <input required type="password" name="credentials[password]" placeholder="Password">
+                <input required type="password" name="credentials[password_confirmation]" placeholder="Password confirmation">
+                <button type="submit" class="btn btn-secondary">Sign up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+          <!-- Sign in button trigger modal -->
+          <div class="d-flex justify-content-center">
+            <button type="button" class="lView btn btn-primary btn-lg" data-toggle="modal" data-target="#signInModal">
+              Sign in
+            </button>
+          </div>
+
+        <!-- Sign in modal -->
+        <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign in</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="sign-in">
+                  <input required type="email" name="credentials[email]" placeholder="Email">
+                  <input required type="password" name="credentials[password]" placeholder="Password">
+                  <button type="submit" class="btn btn-secondary">Sign in</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- Navigation bar -->
+<nav class="nav justify-content-end">
+    <!-- Change password button trigger modal -->
+    <div>
+      <button type="button" class="nav-item s-view btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordModal">
+        Change password
+      </button>
+    </div>
+
+    <!-- Change password modal -->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change password</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="change-password" class="hidden">
+              <input required type="password" name="passwords[old]" placeholder="Old password">
+              <input required type="password" name="passwords[new]" placeholder="New password">
+              <button type="submit" class="btn btn-secondary">Change password</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign out 'button' -->
+    <div class="d-flex justify-content-center">
+      <button id="sign-out" type="submit" class="nav-item s-view btn btn-secondary btn-lg">log out</button>
+    </div>
+</nav>
+
+    <!-- get all records button-->
+          <div class="nav-buttons d-flex justify-content-center">
+            <button id="get-records" class="s-view btn btn-info mr-2 btn-lg">Your records</button>
+          </div>
+
+    <!-- Add record button trigger modal -->
+        <div class="d-flex justify-content-center">
+          <button type="button" class="s-view btn btn-info mr-2 btn-lg" data-toggle="modal" data-target="#addRecordModal">
+            Add record
+          </button>
+        </div>
+
+    <!-- Add record modal -->
+          <div class="modal fade" id="addRecordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Add record</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form id="add-record" class="nav-buttons">
+                    <input type="text" name="title" placeholder="Title">
+                    <input type="text" name="artist" placeholder="Artist">
+                    <input type="text" name="genre" placeholder="Genre">
+                    <input type="Date" name="year" placeholder="Date">
+                    <button type="submit" class="btn btn-outline-info">Add record</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <p class="d-flex justify-content-center message"></p>
+
+      <div id="content" class="content"></div>
+
+    </body>
+</html>
